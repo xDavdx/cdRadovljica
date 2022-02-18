@@ -1,38 +1,1141 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap'); /* font-family: 'Nunito', sans-serif; */
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Nunito', sans-serif;
+  background: #FAF9F0;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #857b2f; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #A6993A; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #867c2d; 
+}
+
+::selection{
+  background: #867c2d;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 7vh;
+  background: #FAF9F0;
+  z-index: 10000;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+ul li {
+  list-style-type: none;
+}
+.kontakt {
+  background: #BFB24A;
+  padding: 1.7em;
+  color: white !important;
+  transition: 0.3s;
+} .kontakt:hover {
+    background: #A6993A;
+}
+
+ul .nav-link {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 1em;
+  text-transform: uppercase;
+} .nav-link:hover {
+  color: #7A4B35;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.burger {
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background: black;
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 1300px) {
+  ul {
+    width: 44%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media only screen and (max-width: 1050px) {
+  ul {
+    position: absolute;
+    right: 0;
+    height: 91vh;
+    top: 9vh;
+    background:#A6993A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  ul li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+
+          /*        HOME PAGE        */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 10vw 1fr 1fr 5vw;
+  grid-template-rows: 5vh 34vh 34vh 15vh;
+  grid-template-areas: 
+                      "roza1 . . ."
+                      "roza1 tekst slika slika"
+                      "roza2 tekst slika slika"
+                      "roza2 poskrolaj poskrolaj socialsi"
+                      ;
+}
+.roza1 {
+  grid-area: roza1;
+} .roza2 {
+  grid-area: roza2;
+  margin-top: 4em;
+} .socialsi {
+  grid-area: socialsi;
+} .socialsi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+                      "fb"
+                      "ig";                    
+} .fb {
+  grid-area: fb;
+} .ig {
+  grid-area: ig;
+}
+.slika-home {
+  grid-area: slika;
+  left: 0;
+} .text-home {
+  grid-area: tekst;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 2em;
+} .poskrolaj {
+  grid-area: poskrolaj;
+  grid-column: 1 / 5 ;
+} .poskrolaj p {
+  text-align: center;
+} 
+
+.poskrolaj:hover {
+  margin-top: .5em;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex !important;
+}
+.tc {
+  text-align: center;
+  justify-content: center;
+  color: #867c2d;
+  text-transform: uppercase;
+  font-weight: 600;
+} .tc p {
+  margin-right: 2em;
+}
+
+
+
+#basic {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 15vw 45vw 25vw 15vw;
+  grid-template-rows: 40vh 60vh;
+  grid-template-areas: 
+                        ". slika-basic dogodki-basic ."
+                        ". text-basic dogodki-basic ."
+                        ;
+                        
+}
+.slika-basic {
+  grid-area: slika-basic;
+  overflow: hidden;
+} .text-basic {
+  grid-area: text-basic;
+} .dogodki-basic {
+  grid-area: dogodki-basic;
+  margin: 0 3em 3em 3em;
+  background: white;
+}
+.text-basic h1 {
+  margin-top: 0;
+}
+.font20 {
+  font-size: 20px;
+}
+.font24 {
+  font-size: 24px;
+}
+.font38 {
+  font-size: 35px;
+}
+.font110 {
+  font-size: 90px;
+}
+.mb0 {
+  margin-bottom: 0;
+}
+.mb2 {
+  margin-bottom: 2em;
+}
+.m0 {
+  margin: 0;
+}
+.w35 {
+  width: 35%;
+}
+.w65 {
+  width: 65%;
+} .w65 p {
+  padding-right: 7em;
+}
+
+.absolute {
+  position: absolute;
+  left: 45%;
+  top: 30%;
+  transform: rotate(30deg);
+}
+
+.naslovi {
+  position: absolute;
+}
+
+.dogodki-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.nazivi {
+  color: #BFB24A;
+  font-size: 14px;
+  font-weight: 600;
+} .nazivi i {
+  color: #BFB24A;
+  font-size: 14px;
+}
+.nazivi-clani {
+  color: #BFB24A;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.centerV {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.domov-pomembn-dogodk {
+  display: grid;
+  grid-template-columns: 10vw 40vw 40vw 10vw;
+  grid-template-rows: 45vh 45vh;
+  grid-gap: 15px;
+  margin-bottom: 5em;
+  grid-template-areas:". slika tekst ."
+                      ". tekst2 slika2 .";
+} .slika123 {
+  grid-area: slika;
+  overflow: hidden;
+} .tekst123 {
+  grid-area: tekst;
+} .slika1234 {
+  grid-area: slika2;
+  overflow: hidden;
+} .tekst1234 {
+  grid-area: tekst2;
+}
+
+.domov-text-dogodki-p {
+  padding: 8em;
+}
+
+
+
+
+
+
+
+.random-home {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 15vw 35vw 35vw 15vw;
+  grid-template-rows: 20vh 35vh 35vh 20vh;
+  grid-template-areas: 
+                      ". random-text random-text ."
+                      "zravn d1 d2 zravn2"
+                      "zravn d3 d4 ."
+                      ". . . zravn3";
+}
+.slika-zravn {
+  grid-area: zravn;
+}
+.slika-zravn-2 {
+  grid-area: zravn2;
+}
+.slika-zravn-3 {
+  grid-area: zravn3;
+}
+.random-text {
+  grid-area: random-text;
+  text-align: center;
+  margin-top: 2em;
+} .d1 {
+  grid-area: d1;
+} .d2 {
+  grid-area: d2;
+} .d3 {
+  grid-area: d3;
+} .d4 {
+  grid-area: d4;
+}
+.d1, .d2, .d3, .d4 {
+  background: white;
+  margin: .5em;
+  border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+}
+
+.d-naslov {
+  font-weight: bold;
+}
+
+
+
+.domov-clani {
+  display: grid;
+  grid-template-columns: 15vw 70vw 15vw;
+  grid-template-areas:
+                      ". sdasd .";
+} .sdasd {
+  grid-area: sdasd;
+}
+
+
+
+
+/*          ZGODOVINA           */
+.zgodovina-grid {
+  display: grid;
+  margin-top: 7em;
+  grid-template-columns: 15vw 45vw 25vw 15vw;
+  grid-template-rows: 20vh 5vh 60vh 40vh 40vh auto;
+  grid-template-areas: 
+                      "zn zn zn zn"
+                      ". . . ."
+                      "nz zs zr ."
+                      ". zt1 zr ."
+                      ".  zse zse ."
+                      ".  zt2 zt2 .";
+}
+.zgodovina-grid div {
+  overflow: hidden;
+}
+
+.nazaj-klik {
+  grid-area: nz;
+  float: right;
+} .nazaj-klik i {
+  float: right;
+  margin-right: 1em;
+}
+
+.zgodovina-naslov {
+  grid-area: zn;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+} .zgodovina-slika {
+  grid-area: zs;
+} .zgodovina-slike {
+  grid-area: zse;
+  margin: 1em;
+} .zgodovina-slike div img {
+  margin: 0.3em;
+} 
+
+.link {
+  color: black;
+}
+
+.najnovejse {
+  margin: 0 3em 0 3em;
+  padding: 0 2em;
+}
+.zgodovina-random {
+  grid-area: zr;
+} .zgodovina-text1 {
+  grid-area: zt1;
+} .zgodovina-text2 {
+  grid-area: zt2;
+}
+
+.red {
+  color: red;
+}
+.mt0 {
+  margin-top: 0;
+} .mt10 {
+  margin-top: 10px;
+}
+
+.clani-card {
+  height: 25vh;
+  width: 47%;
+  margin: 1%;
+  background: white;
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+  box-shadow: 10px 8px 18px -3px rgba(0,0,0,0.47);
+-webkit-box-shadow: 10px 8px 18px -3px rgba(0,0,0,0.47);
+-moz-box-shadow: 10px 8px 18px -3px rgba(0,0,0,0.47);
+}
+.clani-grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+.clani-text {
+  padding-left: 1em;
+} .clani-text, h2, p, h4 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+} .clani-text p {
+  margin-top: 10px;
+  padding-right: 1em;
+}
+@media only screen and (max-width: 1600px) {
+  .clani-card {
+    width: 100% !important;
+  }
+}
+
+.mt7 {
+  margin-top: 7em;
+}
+
+.vw {
+  margin: 0 15vw;
+}
+
+.dog-grid {
+  display: grid;
+  margin-top: 7em;
+  grid-template-columns: 15vw repeat(2, 35vw) 15vw;
+  grid-template-rows: 10vh 40vh 40vh 40vh;
+  grid-template-areas:
+                     ". naslouna naslouna ."
+                     ". dog1 dog2 ."
+                     ". dog3 dog4 ."
+                     ". dog5 . ."
+                     ;
+}
+
+.dog-card-4{
+  grid-area: dog4;
+} .dog-card-3{
+  grid-area: dog3;
+} .dog-card-5{
+  grid-area: dog5;
+}
+.dog-card {
+  height: 20em;
+  margin-bottom: 1em;
+  padding-right: 3em;
+  display: flex;
+} 
+.dog-card-1 {
+  grid-area: dog1;
+} .dog-card-2 {
+  grid-area: dog2;
+} .gaba {
+  grid-area: gaba;
+} .gaba2 {
+  grid-area: gaba2;
+  padding: 0 3em 0 1em;
+}
+
+
+.dogodkiText {
+  z-index: 10;
+} .dogodkiText h3 {
+  margin-bottom: .3em;
+}
+
+
+
+.abc {
+  grid-area: abc;
+} .abcd {
+  grid-area: abcd;
+  padding: 0 3em 0 1em;
+} .dogodkiText p {
+  margin-left: 0;
+} .dogodkiText button {
+  float: right;
+}
+
+.dog-card-bre {
+  /* border: 1px solid #553205; */
+  overflow: hidden;
+  margin: .5em;
+  border-radius: 50px;
+  background: white;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 70%;
+  grid-template-areas: "gaba" "gaba2";
+  transition: .3s;
+} .dog-card-bre img {
+  filter: brightness(40%);
+  z-index: -1000;
+  object-fit: cover;
+} .dog-card-bre:hover {
+  box-shadow: 5px 5px 30px black;
+}
+
+.naslouna {
+  grid-area: naslouna;
+  overflow: hidden;
+}
+.random-dogodki-post {
+  grid-area: random;
+}
+.dogodki-slika {
+  grid-area: slika;
+}
+
+
+.vh35 {
+  height: 35vh;
+} .vh65 {
+  height: 65vh;
+}
+
+
+.overflow {
+  overflow: hidden;
+}
+
+.bre {
+  display: flex;
+}
+.bre div{
+  padding-right: 5px;
+}
+
+.fab, .far {
+  color: black;
+  font-size: 18px;
+}
+
+.obro {
+  border-radius: 73% 27% 50% 50% / 38% 30% 70% 62%  ;
+}
+
+
+
+
+/*           SLIDER          */
+
+
+.embla {
+  position: relative;
+  padding: 20px;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -10px;
+}
+
+.embla__slide {
+  position: relative;
+  min-width: 20%;
+  padding-left: 10px;
+}
+
+.embla__slide__inner {
+  position: relative;
+  overflow: hidden;
+  height: 190px;
+}
+
+.embla__slide__img {
+  position: absolute;
+  border-radius: 20px;
+  background: #7A4B35;
+  background-image: url(./images/dobra-slika.jfif);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to bottom right,#553205,
+  #b8823c);
+} 
+
+
+.embla__slide__img p {
+  font-size: 12px;
+} .embla__slide__img div h2 {
+  margin: 0;
+}
+
+.embla__button {
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  touch-action: manipulation;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  fill: #867c2d;
+  padding: 0;
+}
+
+.black {
+  color: black !important;
+}
+
+.vh3 {
+  height: 3vh;
+}
+
+.block {
+  display: block;
+}
+
+.dogodki-manjsa-slika {
+  display: none;
+}
+
+.embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.embla__button__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.embla__button--prev {
+  left: 27px;
+}
+
+.embla__button--next {
+  right: 27px;
+}
+
+.vsi-clani-img {
+  width: 30%;
+}
+
+
+
+.zanimivosti-grid {
+  display: grid;
+  grid-template-columns: 15vw 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw 15vh;
+  grid-template-rows: 50vh 15vh 60vh 45vh;
+  grid-template-areas: 
+                      ". zani zani zani zani zani zani ."
+                      ". zan2 zan2 . . . . ."
+                      ". zan3 zan3 zan3 zan4 zan4 zan4 ."
+                      ". zan5 zan5 zan6 zan6 zan7 zan7 ."
+                      ;
+}
+
+.zanimivosti-zgodovina {
+  grid-area: zani;
+} .zanimivosti-2-text {
+  grid-area: zan2;
+} .zanimivosti-3 {
+  grid-area: zan3;
+} .zanimivosti-4 {
+  grid-area: zan4;
+} .zanimivosti-5 {
+  grid-area: zan5;
+} .zanimivosti-6 {
+  grid-area: zan6;
+} .zanimivosti-7 {
+  grid-area: zan7;
+}
+
+.white {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.imaaage {
+  z-index: -100;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-position: center;
+  background-size: cover;
+} .teeeext {
+  z-index: 100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sabas {
+  margin-left: 2em;
+  margin-top: 2em;
+}
+
+.zanimivosti-7 {
+  overflow: hidden;
+  border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+  margin: 1.5em 1em;
+}
+
+.zanimivosti-3, .zanimivosti-4, .zanimivosti-5, .zanimivosti-6 {
+  background: white;
+  margin: 1.5em 1em;
+  padding: 0 1em;
+  background-image: 
+            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('./images/dobra-slika.jfif');
+            background-position: center;
+            background-size: cover;
+  border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+  overflow: hidden;
+}
+
+.zanimivosti-tekst {
+  margin-top: 23%;
+}
+
+.zanimivosti-zgodovina-card {
+  background: white;
+  border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
+  overflow: hidden;
+  margin: 0 3em;
+  max-height: 35vh;
+} 
+
+.zgodovina-card-text p {
+  padding-right: 0 !important;
+}
+
+.zgodovina-card-text {
+  margin-left: 2em;
+  padding-right: 5em;
+}
+
+.zgodovina-card-text button {
+  float: right;
+}
+
+button {
+  color: #BFB24A;
+  background: none;
+  border: 1px solid #A6993A;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s;
+  margin-top: .5em;
+}
+button a {
+  text-decoration: none;
+} 
+button:hover {
+  color: white;
+  background: #A6993A;
+}
+
+.gold {
+  color: #BFB24A;
+}
+
+.vsi-clani-text {
+  color: white;
+}
+
+.zaPrintCard {
+  padding-left: 1em;
+  display: flex;
+  place-items: center;
+} .zaPrintCard p {
+  margin: 0;
+  font-size: 12px;
+}
+
+
+.grid-asdsd {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(30, 2.5cm);
+  margin: 0;
+  padding: 0;
+}
+
+
+#simple-gallery {
+  margin: 10vh 15vw;
+} 
+
+.pswp__button:hover {
+  background: none !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.galleryFlex {
+  display: flex;
+}
+
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+} .gallery-container img {
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+} .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+} .gallery-container:hover img {
+  opacity: .3;
+} .gallery-container:hover .middle {
+  opacity: 1;
+}
+
+.gallery-grid-galerija {
+  display: grid;
+  margin: 0 15vw;
+  grid-template-columns: 30vw 20vw 20vw;
+  grid-template-rows: 30vh 30vh 30vh;
+  overflow: hidden;
+  grid-gap: 12px;
+} .gallery-grid-galerija img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.grey {
+  color: grey;
+}
+
+.strong-gold {
+  color: #BFB24A;
+}
+
+
+@media only screen and (max-width: 1550px),
+            screen and (min-height: 1100px)  {
+              .domov-pomembn-dogodk {
+                grid-template-rows: 38vh 38vh;
+              }
+            }  
+
+
+
+
+@media only screen and (max-width: 1500px) {
+
+  /* DOMOV */
+
+  .domov-pomembn-dogodk {
+    grid-template-columns: 7vw 43vw 43vw 7vw;
+  } .domov-text-dogodki-p {
+    padding: 4em;
+  } .domov-text-dogodki-p p {
+    font-size: 15px;
+  } .domov-text-dogodki-p h1 {
+    font-size: 22px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #basic {
+    grid-template-columns: 12vw 48vw 28vw 12vw;
   }
+
+  .font38 {
+    font-size: 30px;
+  }
+
+  .font110 {
+    font-size: 80px;
+  }
+
+  .font24 {
+    font-size: 19px;
+  }
+
+  .font20 {
+    font-size: 18px;
+  }
+
+  .w65 p {
+    padding-right: 0;
+  }
+
+  .random-home {
+    grid-template-columns: 12vw 38vw 38vw 12vw;
+  }
+
+  .domov-clani {
+    grid-template-columns: 10vw 80vw 10vw;
+  }
+  
+}
+
+@media only screen and (max-width: 1350px) {
+
+  /* DOMOV */
+
+  .text-home {
+    margin: 0;
+  }
+
+  .domov-pomembn-dogodk {
+    grid-template-rows: 34vh 34vh;
+  }
+
+  #basic {
+    grid-template-rows: 40vh 40vh;
+    height: auto;
+  }
+
+
+  .home-grid {
+    grid-template-rows: 5vh 34vh 34vh 15vh;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  /* DOMOV */
+
+  .home-grid {
+    grid-template-areas: 
+                      "roza1 . . ."
+                      "roza1 tekst tekst ."
+                      "roza2 slika slika ."
+                      "roza2 poskrolaj poskrolaj socialsi";
+  }
+
+  .slika-home {
+    width: 100%;
+  } .slika-home img {
+    width: 60% !important;
+  }
+
+  .absolute {
+    left: 70%;
+    top: 20%;
+  }
+
+  .text-home {
+    margin: 0 4em;
+  }
+
+  #basic {
+    grid-template-rows: 30vh 40vh;
+    grid-template-areas: 
+                      "slika-basic slika-basic slika-basic slika-basic"
+                      ". abdc text-basic ."
+    ;
+    grid-template-columns: 12vw 28vw 48vw 12vw;
+    height: auto;
+  }
+
+  .dogodki-manjsa-slika {
+    grid-area: abdc;
+    padding: 2em;
+    display: flex;
+  } .dogodki-manjsa-slika img {
+    border-radius: 50%;
+  }
+
+  .dogodki-img {
+    display: none;
+  }
+
+  .text-basic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .d1, .d2, .d3, .d4 {
+    display: block;
+    overflow: hidden;
+  }
+
+  .for-w {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+  }
+
+  .for-w-s {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    overflow: hidden;
+  } .for-w-s img {
+    width: 40%;
+  }
+
+  .domov-text-dogodki-p {
+    padding: 2em;
+  } .domov-text-dogodki-p h1 {
+    font-size: 16px;
+  } .domov-text-dogodki-p p {
+    font-size: 12px;
+  }
+
+  .text-basic p {
+    font-size: 14px;
+  }
+
+  .random-home {
+    grid-template-rows: 12vw auto auto 12vw;
+  }
+
+  
+
 }
