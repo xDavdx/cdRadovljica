@@ -11,7 +11,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -19,7 +19,9 @@ body {
   box-shadow: inset 0 0 5px #857b2f; 
   border-radius: 10px;
 }
- 
+
+
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #A6993A; 
@@ -56,11 +58,13 @@ ul li {
 .kontakt {
   background: #BFB24A;
   padding: 1.7em;
+  border-radius: 50px 50px 0 50px ;
   color: white !important;
   transition: 0.3s;
 } .kontakt:hover {
     background: #A6993A;
 }
+
 
 ul .nav-link {
   text-decoration: none;
@@ -147,6 +151,14 @@ ul .nav-link {
 }
 
 
+.error-grid {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 95vh;
+  grid-template-areas: "ja1 ja2";
+  margin: 0 5em;
+}
+
 
           /*        HOME PAGE        */
 
@@ -218,7 +230,6 @@ ul .nav-link {
 } .tc p {
   margin-right: 2em;
 }
-
 
 
 #basic {
@@ -400,6 +411,80 @@ ul .nav-link {
 }
 
 
+.bg-kontkat {
+  height: 94vh;
+}
+
+.bgb-kontakt {
+  background: #553205;
+  height: 60vh;
+
+}
+
+.kontakt-box {
+  background: white;
+  height: 40vh;
+  width: 55vw;
+  display: flex;
+}
+
+.asdklfj {
+  padding: 2em;
+  width: 55%;
+}
+
+.formBox {
+  display: table-caption;
+}
+
+.dve {
+  background-color: #553205;
+  width: 45%;
+  color: white;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #553205;
+  padding: .5em 0;
+  font: inherit;
+}
+
+::placeholder {
+  color: #553205;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+input:focus input, input:valid input {
+  transform: translateY(-1.5rem);
+}
+
+.ja {
+  padding: 0 0 1em 0;
+}
+.jaa {
+  padding: 2em 2em 2em 3em;
+}
+
+.kontakt-info h2 {
+  margin-bottom: 1.5em;
+} .kontakt-info h4 i{
+  color: white;
+}
+
+.poslji {
+  padding: 1em 3em;
+}
+
+.white12 i {
+  color: white;
+  font-size: 28px;
+  margin-top: 1em;
+}
+
 
 
 /*          ZGODOVINA           */
@@ -407,12 +492,12 @@ ul .nav-link {
   display: grid;
   margin-top: 7em;
   grid-template-columns: 15vw 45vw 25vw 15vw;
-  grid-template-rows: 20vh 5vh 60vh 40vh 40vh auto;
+  grid-template-rows: 20vh 5vh 60vh auto auto auto;
   grid-template-areas: 
                       "zn zn zn zn"
                       ". . . ."
                       "nz zs zr ."
-                      ". zt1 zr ."
+                      ". zt1 zt1 ."
                       ".  zse zse ."
                       ".  zt2 zt2 .";
 }
@@ -444,6 +529,9 @@ ul .nav-link {
 
 .link {
   color: black;
+  transition: .2s;
+} .link:hover {
+  color: #7A4B35;
 }
 
 .najnovejse {
@@ -454,6 +542,7 @@ ul .nav-link {
   grid-area: zr;
 } .zgodovina-text1 {
   grid-area: zt1;
+  padding: 0 2em;
 } .zgodovina-text2 {
   grid-area: zt2;
 }
@@ -499,7 +588,7 @@ ul .nav-link {
 }
 
 .mt7 {
-  margin-top: 7em;
+  padding-top: 7em;
 }
 
 .vw {
@@ -508,14 +597,15 @@ ul .nav-link {
 
 .dog-grid {
   display: grid;
+  margin: 0 15vw;
   margin-top: 7em;
-  grid-template-columns: 15vw repeat(2, 35vw) 15vw;
+  grid-template-columns: repeat(2, 35vw);
   grid-template-rows: 10vh 40vh 40vh 40vh;
   grid-template-areas:
-                     ". naslouna naslouna ."
-                     ". dog1 dog2 ."
-                     ". dog3 dog4 ."
-                     ". dog5 . ."
+                     "naslouna naslouna"
+                     "dog1 dog2"
+                     "dog3 dog4"
+                     "dog5 ."
                      ;
 }
 
@@ -762,7 +852,7 @@ ul .nav-link {
 .zanimivosti-grid {
   display: grid;
   grid-template-columns: 15vw 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw 15vh;
-  grid-template-rows: 50vh 15vh 60vh 45vh;
+  grid-template-rows: 50vh 15vh 40vh 30vh;
   grid-template-areas: 
                       ". zani zani zani zani zani zani ."
                       ". zan2 zan2 . . . . ."
@@ -791,6 +881,10 @@ ul .nav-link {
   color: white;
 }
 
+.asdf {
+  margin: 5em 0;
+} 
+
 .imaaage {
   z-index: -100;
   background-image: 
@@ -806,23 +900,22 @@ ul .nav-link {
   margin-top: 2em;
 }
 
-.zanimivosti-7 {
-  overflow: hidden;
-  border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
-  margin: 1.5em 1em;
-}
 
-.zanimivosti-3, .zanimivosti-4, .zanimivosti-5, .zanimivosti-6 {
+.zanimivosti-3, .zanimivosti-4, .zanimivosti-5, .zanimivosti-6, .zanimivosti-7 {
   background: white;
   margin: 1.5em 1em;
-  padding: 0 1em;
-  background-image: 
-            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url('./images/dobra-slika.jfif');
-            background-position: center;
-            background-size: cover;
   border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
   overflow: hidden;
+}
+
+.blur-zan img {
+  filter: brightness(40%);
+  object-fit: cover;
+  z-index: -1000;
+} 
+
+.zan-text-index {
+  z-index: 10;
 }
 
 .zanimivosti-tekst {
@@ -958,6 +1051,12 @@ figcaption {
 
 .strong-gold {
   color: #BFB24A;
+}
+
+.ODogodkih-grid {
+  margin: 0 15em;
+  display: grid;
+  grid-template-columns: 100vh;
 }
 
 
@@ -1136,6 +1235,18 @@ figcaption {
     grid-template-rows: 12vw auto auto 12vw;
   }
 
-  
+  .error-grid {
+    grid-template-columns: 100vw;
+    grid-template-rows: 20vh 20vh;
+    grid-template-areas: "ja2" "ja1";
+    margin: 0;
+    padding-top: 30vh;
+    height: 100vh;
+  } .error-slika {
+    grid-area: ja2;
+  } .error-slika img {
+    width: 60%;
+  }
+
 
 }

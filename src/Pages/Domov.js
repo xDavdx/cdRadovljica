@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 // import Dogodki from './Dogodki'
 import EmblaCarousel from './EmblaCarousel';
 import { dubaiCebela, debateObKavi, ambMasa, medRastline, hisaKranjskaCebela } from '../data/dogodki-js';
+import {ReactTitle} from 'react-meta-tags';
 
 const SLIDE_COUNT = 115;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
@@ -11,6 +12,7 @@ const slides = Array.from(Array(SLIDE_COUNT).keys());
 const Domov = () => {
     return (
         <body style={domacaStran.div}>
+            <ReactTitle title="Čebelarsko Društvo Radovljica"/>
             <div className='home-grid'>
                 <div className='roza1'><img src={require('../images/roza1.png')} alt="" width={'100%'}/></div>
                 <div className='text-home'>

@@ -1,5 +1,4 @@
 
-const img_path = '../images/'
 
 export const upravniOdbor = [
     {

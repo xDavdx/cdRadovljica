@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {ReactTitle} from 'react-meta-tags';
 
 const Zgodovina = () => {
     return (
         <div className='zgodovina-grid'>
+            <ReactTitle title="ČDRadovljica | zgodovina"/>
             <div className='zgodovina-naslov center'>
                 <img src={require('../images/naslovi.jpg')} alt="" width={'100%'} />
                 <h1 className='naslovi'>ZGODOVINA</h1>
@@ -15,10 +17,10 @@ const Zgodovina = () => {
             <div className='zgodovina-random najnovejse'>
                 <h3>Najnovejše</h3>
                 <hr />
-                <p className='grey'>SLOVENCI V DUBAJ PRIPELJALI NAJVEČJO ČEBELO NA SVETU - Skoraj pet tisoč kilometrov nas loči do arabskega mesta Dubaj...</p>
-                <p className='grey'>ČEBELARJI POČASTILI SVOJEGA ZAVETNIKA - </p>
-                <p className='grey'>Odprta kuhna 2022 / Začetek 10. sezone Odprte kuhne v Ljubljani bo v petek, 18.3.2022</p>
-                <p className='grey'>Odprta kuhna 2022 / Začetek 10. sezone Odprte kuhne v Ljubljani bo v petek, 18.3.2022</p>
+                <Link to='/dogodki/odogodkih' className='grey link najnovejse-text'>SLOVENCI V DUBAJ PRIPELJALI NAJVEČJO ČEBELO NA SVETU - Skoraj pet tisoč kilometrov nas loči do arabskega mesta Dubaj...</Link>
+                <Link to='/dogodki/odogodkih' className='grey link najnovejse-text'>ČEBELARJI POČASTILI SVOJEGA ZAVETNIKA - </Link>
+                <Link to='/dogodki/odogodkih' className='grey link' najnovejse-text>Odprta kuhna 2022 / Začetek 10. sezone Odprte kuhne v Ljubljani bo v petek, 18.3.2022</Link>
+                <Link to='/dogodki/odogodkih' className='grey link najnovejse-text'>Odprta kuhna 2022 / Začetek 10. sezone Odprte kuhne v Ljubljani bo v petek, 18.3.2022</Link>
             </div>
             <div className='nazaj-klik'>
                 <Link className='link' to='/zanimivosti'><i className="fas fa-chevron-left"> Nazaj na zanimivosti</i></Link>
@@ -26,7 +28,7 @@ const Zgodovina = () => {
             <div className='zgodovina-text1'>
                 <h3 className='datum nazivi mb0'><i className="far fa-calendar-alt"></i> JAN 6, 2022 </h3>
                 <h1 className='m0'>ČEBELARSTVO NA SLOVENSKEM</h1>
-                <p className='font20'>
+                <p className='font16 grey'>
                     Ljubezen do čebel ima na Slovenskem dolgo tradicijo. Pravzaprav bi skoraj z 
                     gotovostjo lahko trdili, da na svetu težko najdemo deželo s tako bogato naravno 
                     in kulturno dediščino, tako vsestransko in raznoliko prepleteno s čebelarstvom, 
@@ -51,7 +53,7 @@ const Zgodovina = () => {
             </div>
             <div className='zgodovina-text2'>
                 <h1 className='m0'>ZGODOVINA ČEBELARSTVA</h1>
-                <p className='font20'>
+                <p className='font16 grey'>
                     Čebelarjenje sega v čas po zadnji ledeni dobi, saj so se takrat razvile prve pasme medonosne čebele. Prve dokaze o 
                     ukvarjanju s čebelami najdemo na jamskih slikah pred več kot 10.000 let pred našim štetjem. Začetki čebelarstva so se
                     pričeli z odtujevanjem medu čebelam, saj je človek pričel med uporabljati kot posladek. Sčasoma ljudje čebel niso več

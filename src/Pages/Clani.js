@@ -3,7 +3,8 @@ import { clani, claniByIndex, upravniOdbor } from '../data/clani';
 import { ExternalLink } from 'react-external-link';
 import ReactDOM from "react-dom";
 import EmblaCarousel from './EmblaCarousel';
-// import CarouselButton from "../Pages/CarouselButton";
+// import CarouselButton from "../pages/CarouselButton";
+import {ReactTitle} from 'react-meta-tags';
 
 const SLIDE_COUNT = 115;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
@@ -20,7 +21,8 @@ function Mailto({ email, ...props }) {
 
         const Clani = () => {
             return (
-                <div className='mt7 vw' style={dogodki.div} >
+                <div className='vw' style={dogodki.div} >
+                    <ReactTitle title="ČDRadovljica | člani"/>
                         <h3>VSI ČLANI:</h3>
                         <EmblaCarousel slides={slides} />
 

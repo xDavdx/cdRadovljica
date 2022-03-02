@@ -2,6 +2,7 @@ import React from 'react'
 import 'photoswipe/dist/photoswipe.css';
 import 'photoswipe/dist/default-skin/default-skin.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
+import {ReactTitle} from 'react-meta-tags';
 
 
 const Fotogralerija = () => {
@@ -13,6 +14,7 @@ const Fotogralerija = () => {
   }
   return (
     <Gallery id="simple-gallery">
+      <ReactTitle title="ČDRadovljica | fotogalerija"/>
       <div className='gallery-grid-galerija'>
         <Item
           original={require('../images/dobra-slika.jfif')}
