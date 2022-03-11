@@ -12,55 +12,55 @@ export const upravniOdbor = [
         ime: 'Petra Bole',
         slika: require('../images/d2.png'),
         naziv: 'tajnica',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: '/'
     },
     {
         ime: 'Blaž Cvetko',
         slika: require('../images/d2.png'),
         naziv: 'gospodar',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: 'Čebelari od leta 1987, ko je podedoval in prevzel čebele po očetovi smrti. S čebelami se je seznanil od očeta že v otroški dobi. Večkrat mu je ogrebal roje po bližnjih drevesih; pri točenju medu pa je sodelovala cela družina'
     },
     {
         ime: 'Mojca Kržišnik',
         slika: require('../images/d2.png'),
         naziv: 'blagajničarka',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: '/'
     },
     {
         ime: 'Gregor Mandeljc',
         slika: require('../images/d2.png'),
         naziv: 'povernik za pasišča na jelovici',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: '/'
     },
     {
         ime: 'Gregor Pesjak',
         slika: require('../images/d2.png'),
         naziv: 'Pikniki, tekmovanja',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: '/'
     },
     {
         ime: 'Janez Rabič',
         slika: require('../images/d2.png'),
         naziv: 'festival medu',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: '/'
     },
     {
         ime: 'Drago Rozman',
         slika: require('../images/d2.png'),
         naziv: 'vodja poverjenikov',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: '/'
     },
     {
         ime: 'Janko Stušek',
         slika: require('../images/d2.png'),
         naziv: 'organizacija strokovnih ekskurzij, stiki s tujino',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: 'Po poklicu je profesor in upokojen kot radovljiški župan. Član društva je od leta 2005, je pa tudi član obalnega čebelarskega društva Koper. Čebelari ljubiteljsko, ker ima rad čebele.'
     },
     {
         ime: 'Primož Brejc',
         slika: require('../images/d2.png'),
         naziv: '',
-        besedilo: 'Lorem alskdfsdlkf dsfhksdjadsfhksdjadsfhksdja hsdfkjhsdahsdfkjhsdahsdfkjhsda kjfhsdjk sdh'
+        besedilo: '/'
     },
 ];
 

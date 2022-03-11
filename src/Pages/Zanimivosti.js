@@ -42,26 +42,26 @@ const Zanimivosti = () => {
 
                 <div className='zanimivosti-2-text'>
                     <h2>Ostale zanimivosti</h2>
-                    <p>asd.msdmsfklsklad jlksdfsd sadfnsdfsdfklsd</p>
+                    <p>Poglejte si še ostale zanimivosti</p>
                 </div>
 
 
 
-                <div className='zanimivosti-3'>
+                <div className='zanimivosti-3 zanimivosti123'>
                 <div className='vh3 blur-zan'>
                         <img className='center' src={blog4.slika} alt=""/>
                     </div>
-                    <div className='vh65 gaba2 black zan-text-index'>
+                    <div className='vh65 gaba2 white zan-text-index'>
                         <h4 className='white'>{blog2.naslov1}</h4>
                         <p className='white'>
                             {blog2.okvirno}
                         </p>
-                    <button>Beri več <i className="fas fa-chevron-right"></i></button>
+                    <Link to='Blog2'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
 
                     </div>
                 </div>
                     
-                <div className='zanimivosti-4'>
+                <div className='zanimivosti-4 zanimivosti123'>
                 <div className='vh3 blur-zan'>
                         <img className='center' src={blog4.slika} alt=""/>
                     </div>
@@ -70,11 +70,11 @@ const Zanimivosti = () => {
                         <p className='white'>
                             {blog1.okvirno}
                         </p>
-                    <button>Beri več <i className="fas fa-chevron-right"></i></button>
+                        <Link to='Blog1'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
 
                     </div>
                 </div>
-                <div className='zanimivosti-5'>
+                <div className='zanimivosti-5 zanimivosti123'>
                 <div className='vh3 blur-zan'>
                         <img className='center' src={blog4.slika} alt=""/>
                     </div>
@@ -83,11 +83,11 @@ const Zanimivosti = () => {
                         <p className='white'>
                             {blog4.okvirno}
                         </p>
-                    <button>Beri več <i className="fas fa-chevron-right"></i></button>
+                        <Link to='Blog4'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
 
                     </div>
                 </div>
-                <div className='zanimivosti-6'>
+                <div className='zanimivosti-6 zanimivosti123'>
                 <div className='vh3 blur-zan'>
                         <img className='center' src={blog4.slika} alt=""/>
                     </div>
@@ -96,13 +96,13 @@ const Zanimivosti = () => {
                         <p className='white'>
                             {blog5.okvirno}
                         </p>
-                    <button>Beri več <i className="fas fa-chevron-right"></i></button>
+                        <Link to='Blog5'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
 
                     </div>
                 </div>
 
 
-                <div className='zanimivosti-7'>
+                <div className='zanimivosti-7 zanimivosti123'>
                     <div className='vh3 blur-zan'>
                         <img className='center' src={blog4.slika} alt=""/>
                     </div>
@@ -111,7 +111,7 @@ const Zanimivosti = () => {
                         <p className='white'>
                             {blog6.okvirno}
                         </p>
-                    <button>Beri več <i className="fas fa-chevron-right"></i></button>
+                        <Link to='Blog6'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
 
                     </div>
                 </div>
@@ -125,7 +125,7 @@ const Zanimivosti = () => {
 
 const domacaStran = {
     div: {
-        marginTop: '7em',
+        marginTop: '0',
     }, 
   }
 

@@ -21,7 +21,7 @@ const Fotogralerija = () => {
           thumbnail={require('../images/dobra-slika.jfif')}
           width="1600"
           height="1600"
-          title="Author: Folkert Gorter"
+          title="Avtor: /"
           id="so-first"
         >
           {({ ref, open }) => (
@@ -40,7 +40,7 @@ const Fotogralerija = () => {
           thumbnail={require('../images/slovenski-zajtrk.jpg')}
           width="1600"
           height="1068"
-          title="Author: Samuel Rohl"
+          title="Avtor: /"
             >
               {({ ref, open }) => (
                 <img
@@ -57,7 +57,7 @@ const Fotogralerija = () => {
               thumbnail="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_m.jpg"
               width="1600"
               height="1066"
-              title="Author: Ales Krivec"
+              title="Avtor: /"
             >
               {({ ref, open }) => (
                 <img
@@ -74,7 +74,7 @@ const Fotogralerija = () => {
               thumbnail="https://farm6.staticflickr.com/5584/14985868676_4b802b932a_m.jpg"
               width="1600"
               height="1066"
-              title="Author: Michael Hull"
+              title="Avtor: /"
             >
               {({ ref, open }) => (
                 <img
@@ -91,7 +91,7 @@ const Fotogralerija = () => {
               thumbnail="https://farm4.staticflickr.com/3920/15008465772_383e697089_m.jpg"
               width="1600"
               height="1066"
-              title="Author: Thomas Lefebvre"
+              title="Avtor: /"
             >
               {({ ref, open }) => (
                 <img
@@ -107,7 +107,7 @@ const Fotogralerija = () => {
           thumbnail={require('../images/dobra-slika.jfif')}
           width="1600"
           height="1600"
-          title="Author: Folkert Gorter"
+          title="Avtor: /"
           id="so-first"
         >
           {({ ref, open }) => (
@@ -126,7 +126,7 @@ const Fotogralerija = () => {
           thumbnail={require('../images/slovenski-zajtrk.jpg')}
           width="1600"
           height="1068"
-          title="Author: Samuel Rohl"
+          title="Avtor: /"
             >
               {({ ref, open }) => (
                 <img
@@ -143,7 +143,7 @@ const Fotogralerija = () => {
               thumbnail="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_m.jpg"
               width="1600"
               height="1066"
-              title="Author: Ales Krivec"
+              title="Avtor: /"
             >
               {({ ref, open }) => (
                 <img
@@ -160,7 +160,7 @@ const Fotogralerija = () => {
               thumbnail="https://farm6.staticflickr.com/5584/14985868676_4b802b932a_m.jpg"
               width="1600"
               height="1066"
-              title="Author: Michael Hull"
+              title="Avtor: /"
             >
               {({ ref, open }) => (
                 <img
@@ -177,7 +177,7 @@ const Fotogralerija = () => {
               thumbnail="https://farm4.staticflickr.com/3920/15008465772_383e697089_m.jpg"
               width="1600"
               height="1066"
-              title="Author: Thomas Lefebvre"
+              title="Avtor: /"
             >
               {({ ref, open }) => (
                 <img

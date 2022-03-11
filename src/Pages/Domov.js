@@ -1,5 +1,5 @@
 import React from 'react'
-// import { ExternalLink } from 'react-external-link';
+import { ExternalLink } from 'react-external-link';
 import { Link } from 'react-router-dom'
 // import Dogodki from './Dogodki'
 import EmblaCarousel from './EmblaCarousel';
@@ -42,8 +42,8 @@ const Domov = () => {
                 </div>
                 <div className='socialsi'>
                     <div className='socialsi-grid'>
-                            <div className='fb center'><img src={require('../images/facebook.jpg')} alt="" width={'40%'}/> <br /></div>
-                            <div className='ig center'><img src={require('../images/instagram.png')} alt="" width={'30%'}/></div>
+                            <ExternalLink href='https://www.facebook.com/%C4%8Cebelarsko-dru%C5%A1tvo-Radovljica-112122538037995' className='fb center'><i class="fab fa-facebook"></i> <br /></ExternalLink>
+                            <ExternalLink href='https://www.facebook.com/%C4%8Cebelarsko-dru%C5%A1tvo-Radovljica-112122538037995' className='ig center'><i class="fab fa-instagram"></i> <br /></ExternalLink>
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@ const Domov = () => {
                             <div>
                             <h3 className='m0 nazivi'> <i className="far fa-calendar-alt"></i> 7.12.2021</h3>
                             <h1 className='m0 d-naslov'>Ambroževa maša</h1>
-                            <p className='m0'>{ambMasa.naKratko}
+                            <p className='m0 dog-phone-domov'>{ambMasa.naKratko}
                             </p>
                             <Link to="dogodki">
                                 <button className='d-button'>Beri več <i className="fas fa-chevron-right"></i></button>
@@ -156,7 +156,7 @@ const Domov = () => {
                             <div>
                             <h3 className='m0 nazivi'> <i className="far fa-calendar-alt"></i> 4.11.2021</h3>
                             <h1 className='m0 d-naslov'>4. Seja in srečanje</h1>
-                            <p className='m0'> z najstarejšim članom ČD Severinom Frolnomojm</p>
+                            <p className='m0 dog-phone-domov'> z najstarejšim članom ČD Severinom Frolnomojm</p>
                             <Link to="dogodki">
                                 <button className='d-button'>Beri več <i className="fas fa-chevron-right"></i></button>
                             </Link>
@@ -169,7 +169,7 @@ const Domov = () => {
                             <div>
                             <h3 className='m0 nazivi'> <i className="far fa-calendar-alt"></i> 26.3.2021</h3>
                             <h1 className='m0 d-naslov'>Srečanje čebelarjev</h1>
-                            <p className='m0'>vse Slovensko srečanje na Lovrencu na Pohorju
+                            <p className='m0 dog-phone-domov'>vse Slovensko srečanje na Lovrencu na Pohorju
                             </p>
                             <Link to="dogodki">
                                 <button className='d-button'>Beri več <i className="fas fa-chevron-right"></i></button>
@@ -183,7 +183,7 @@ const Domov = () => {
                             <div>
                             <h3 className='m0 nazivi'> <i className="far fa-calendar-alt"></i> 6.5.2021</h3>
                             <h1 className='m0 d-naslov'>Novi oddelki</h1>
-                            <p className='m0'>Novi upravni oddelki ČD Radovljica
+                            <p className='m0 dog-phone-domov'>Novi upravni oddelki ČD Radovljica
                             </p>
                             <Link to="dogodki">
                                 <button className='d-button'>Beri več <i className="fas fa-chevron-right"></i></button>
@@ -206,7 +206,6 @@ const Domov = () => {
 
 const domacaStran = {
     div: {
-        marginTop: '7em',
         height: 'auto',
         backgroundColor: '#FAF9F0',
     }, velkTexst: {

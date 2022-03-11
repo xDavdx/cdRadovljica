@@ -62,7 +62,7 @@ function Mailto({ email, ...props }) {
 
 const dogodki = {
     div: {
-        marginTop: '7em',
+        marginTop: '0',
     }, 
 }
 

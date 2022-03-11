@@ -1,5 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap'); /* font-family: 'Nunito', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap'); /* font-family: 'Comfortaa', cursive;    */
+
 body {
   padding: 0;
   margin: 0;
@@ -189,8 +190,15 @@ ul .nav-link {
                       "ig";                    
 } .fb {
   grid-area: fb;
+  text-decoration: none;
+  margin-bottom: 1em;
+} .fb i {
+  font-size: 28px;
 } .ig {
   grid-area: ig;
+  text-decoration: none;
+} .ig i {
+  font-size: 28px;
 }
 .slika-home {
   grid-area: slika;
@@ -490,12 +498,9 @@ input:focus input, input:valid input {
 /*          ZGODOVINA           */
 .zgodovina-grid {
   display: grid;
-  margin-top: 7em;
   grid-template-columns: 15vw 45vw 25vw 15vw;
-  grid-template-rows: 20vh 5vh 60vh auto auto auto;
+  grid-template-rows: 60vh auto auto auto;
   grid-template-areas: 
-                      "zn zn zn zn"
-                      ". . . ."
                       "nz zs zr ."
                       ". zt1 zt1 ."
                       ".  zse zse ."
@@ -530,6 +535,9 @@ input:focus input, input:valid input {
 .link {
   color: black;
   transition: .2s;
+  text-decoration: none;
+  display: block;
+  margin-bottom: .5em;
 } .link:hover {
   color: #7A4B35;
 }
@@ -545,6 +553,7 @@ input:focus input, input:valid input {
   padding: 0 2em;
 } .zgodovina-text2 {
   grid-area: zt2;
+  margin-bottom: 5em;
 }
 
 .red {
@@ -588,7 +597,7 @@ input:focus input, input:valid input {
 }
 
 .mt7 {
-  padding-top: 7em;
+  padding-top: 0;
 }
 
 .vw {
@@ -598,7 +607,6 @@ input:focus input, input:valid input {
 .dog-grid {
   display: grid;
   margin: 0 15vw;
-  margin-top: 7em;
   grid-template-columns: repeat(2, 35vw);
   grid-template-rows: 10vh 40vh 40vh 40vh;
   grid-template-areas:
@@ -712,6 +720,10 @@ input:focus input, input:valid input {
   border-radius: 73% 27% 50% 50% / 38% 30% 70% 62%  ;
 }
 
+.footer {
+  padding: 2em ;
+}
+
 
 
 
@@ -783,7 +795,6 @@ input:focus input, input:valid input {
   background-image: linear-gradient(to bottom right,#553205,
   #b8823c);
 } 
-
 
 .embla__slide__img p {
   font-size: 12px;
@@ -908,11 +919,14 @@ input:focus input, input:valid input {
   overflow: hidden;
 }
 
-.blur-zan img {
-  filter: brightness(40%);
+.vh3 img {
   object-fit: cover;
   z-index: -1000;
-} 
+} .vh3 {
+  
+  z-index: -1000;
+  /* filter: brightness(40%); */
+}
 
 .zan-text-index {
   z-index: 10;
@@ -1036,10 +1050,11 @@ figcaption {
 .gallery-grid-galerija {
   display: grid;
   margin: 0 15vw;
-  grid-template-columns: 30vw 20vw 20vw;
-  grid-template-rows: 30vh 30vh 30vh;
-  overflow: hidden;
+  grid-template-columns: 35vw 35vw;
+  grid-template-rows: repeat(6, 30vh);
   grid-gap: 12px;
+  border-radius: 10px;
+  overflow: hidden;
 } .gallery-grid-galerija img {
   object-fit: cover;
   width: 100%;
@@ -1056,7 +1071,10 @@ figcaption {
 .ODogodkih-grid {
   margin: 0 15em;
   display: grid;
-  grid-template-columns: 100vh;
+}
+
+.odogodkih-text {
+  padding: 0 4em;
 }
 
 
@@ -1167,6 +1185,17 @@ figcaption {
     margin: 0 4em;
   }
 
+  .logo-nav {
+    width: 70%;
+  }  .logo-nav img {
+    width: 70%;
+  }
+
+  nav {
+    justify-content: center;
+    align-items: center;
+  }
+
   #basic {
     grid-template-rows: 30vh 40vh;
     grid-template-areas: 
@@ -1249,4 +1278,145 @@ figcaption {
   }
 
 
+}
+
+@media only screen and (max-width: 720px) {
+  .domov-pomembn-dogodk {
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: auto auto auto auto ;
+    grid-gap: 0;
+    margin-bottom: 0;
+    grid-template-areas:". slika  ."
+                        ". tekst  ."
+                        ". slika2 ."
+                        ". tekst2 ."
+                        ;
+  }
+  .domov-pomembn-dogodk  img {
+    width: 100%;
+  }
+
+  
+  .home-grid {
+    grid-template-columns: 5vw 1fr 5vw;
+    grid-template-rows: 30vh 50vh 10vh;
+    text-align: left;
+    grid-template-areas: 
+                        ". slika ."
+                        ". tekst ."
+                        ". . ."
+                        ;
+    text-align: center;
+  } .roza2, .roza1 {
+    display: none;
+  }
+
+  .dogodki-manjsa-slika {
+    padding: .8em;
+  }
+
+  #basic {
+    grid-template-rows: 30vh auto;
+    grid-template-columns: 2vw 33vw 63vw 2vw;
+  }
+
+  .socialsi-grid {
+    display: none;
+  }
+
+  .random-home {
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: 12vh auto auto auto auto;
+    grid-template-areas: 
+                        ". random-text ."
+                        "zravn d1 zravn2"
+                        "zravn d2 ."
+                        ". d3 ."
+                        ". d4 .";
+  } .dog-phone-domov {
+    padding-right: 1em !important;
+    font-size: 14px;
+  }
+
+  .d1, .d2, .d3, .d4 {
+    height: auto;
+  } .d-naslov {
+    font-size: 23px;
+  } 
+
+  .kontakt-box {
+    display: block;
+    height: 120vh;
+    width: 90%;
+  } .dve {
+    width: 100%;
+  }
+
+  .clani-card {
+    height: auto;
+  }
+
+  .domov-clani {
+    grid-template-columns: 5vw 90vw 5vw;
+  }
+
+  .embla__slide {
+    min-width: 50%;
+  }
+
+  .embla__slide__inner {
+    height: 144px;
+  }
+  .text-home {
+    margin: 0 ;
+  }
+
+  .font20 {
+    font-size: 14px;
+  }
+
+  .absolute {
+    display: none;
+  }
+
+  .font110 {
+    font-size: 40px;
+  }
+
+  .font38 {
+    font-size: 22px;
+  }
+  
+  .slika-home img {
+    width: 100% !important;
+  }
+
+  .poskrolaj {
+    display: none;
+  }
+
+  .dog-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh repeat(5, 30vh);
+    grid-template-areas:
+        "naslouna"
+        "dog1"
+        "dog2"
+        "dog3"
+        "dog4"
+        "dog5"
+        ;
+        margin: 0 2em;
+  } .dog-card-bre {
+    grid-template-rows: 5% 95%;
+  } .dogodki-fon-tekst {
+    font-size: 12px;
+    height: 48px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  } .dogodki-fon-naslov {
+    font-size: 16px;
+  } .dog-card-bre img {
+    height: 40vh;
+  }
 }

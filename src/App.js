@@ -20,7 +20,12 @@ import CarouselButton from "./pages/CarouselButton";
 import EmblaCarousel from "./pages/EmblaCarousel"
 import { ExternalLink } from 'react-external-link';
 import ODogodkih from './pages/ODogodkih';
+import Blog1 from './pages/Blog1';
+import Blog2 from './pages/Blog2';
+import Blog3 from './pages/Blog3';
+import Blog4 from './pages/Blog4';
 import MetaTags from 'react-meta-tags';
+import ScrollToTop from './components/ScrollToTop';
 
 <script src="https://kit.fontawesome.com/d36fb56bf7.js" crossorigin="anonymous"></script>
 
@@ -28,6 +33,7 @@ import MetaTags from 'react-meta-tags';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
         <MetaTags>
           <title>Čebelarsko Društvo Radovljica</title>
           <meta name="description" content="Čebelarsko društvo Radovljica se ponaša z dolgoletno tradicijo aktivnega delovanja na področju čebelarstva. V društvo je vključenih 110 čebelarjev in čebelark, ki čebelarijo s približno 1500 čebeljimi družinami. Predsednik društva je Tomaž Gregorc, tajnica društva pa dr. Petra Bole, direktorica Muzejev radovljiške občine." />
@@ -65,9 +71,13 @@ function App() {
         <Route path='/zanimivosti' element={<Zanimivosti />} />
         <Route path='/emblacarousel' element={<EmblaCarousel />} />
         <Route path='/dogodki/odogodkih' element={<ODogodkih />} />
+        <Route path='/zanimivosti/Blog1' element={<Blog1 />} />
+        <Route path='/zanimivosti/Blog2' element={<Blog2 />} />
+        <Route path='/zanimivosti/Blog3' element={<Blog3 />} />
+        <Route path='/zanimivosti/Blog4' element={<Blog4 />} />
       </Routes>
       <footer>
-        <div className='center'>
+        <div className='center footer'>
           &copy; Čebelarsko društvo Radovljica - 2022
         </div>
       </footer>

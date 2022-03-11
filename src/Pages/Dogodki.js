@@ -1,5 +1,5 @@
 import React from 'react';
-import { ambMasa, dubaiCebela, medRastline, hisaKranjskaCebela, debateObKavi, VsiDogodki } from '../data/dogodki-js';
+import { VsiDogodki } from '../data/dogodki-js';
 import { Link } from 'react-router-dom';
 import {ReactTitle} from 'react-meta-tags';
 
@@ -23,8 +23,8 @@ const Dogodki = () => {
                 </div>
                 <div className='vh65 gaba2 dogodkiText white'>
                     <p className='nazivi mt0 sabas'><i className="far fa-calendar-alt"></i> 6.2.2022  </p>
-                    <h3 className='mb0'>{VD.ime}</h3>
-                    <h5 className='mt0'>{VD.naKratko}</h5>
+                    <h3 className='mb0 dogodki-fon-naslov'>{VD.ime}</h3>
+                    <h5 className='mt0 dogodki-fon-tekst'>{VD.naKratko}</h5>
                     <Link to='odogodkih'>
                         <button>Beri več <i className="fas fa-chevron-right"></i></button>
                     </Link>

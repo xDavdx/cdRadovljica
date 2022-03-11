@@ -1,5 +1,6 @@
 {
   "name": "cebelarskodrustvo-radovljica",
+  "homepage": "https://cebelarsko-drustvo-radovljica.si/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

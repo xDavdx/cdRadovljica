@@ -1,6 +1,5 @@
 import React, { useRef  } from 'react'
 import {ReactTitle} from 'react-meta-tags';
-import { Link } from 'react-router-dom';
 import { ExternalLink } from 'react-external-link';
 import emailjs from 'emailjs-com';
 
@@ -11,7 +10,7 @@ export const Kontakt = () => {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+      emailjs.sendForm('CDR-mail', 'template_hcpbf5m', form.current, '-QHe5ceF5SGnMuWlH')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -30,13 +29,13 @@ export const Kontakt = () => {
                             <h2 className='ja'>Piši nam!</h2>
                             <form id='formInput' ref={form} onSubmit={sendEmail}>
                                 <div className='formBox ja'>
-                                    <input type="name" placeholder='ime...' required/>
+                                    <input type="text" name="user_name" placeholder='ime...' required/>
                                 </div>
                                 <div className='formBox ja'>
-                                    <input type="email" placeholder='E-mail...' required/>
+                                    <input type="email" name="user_email" placeholder='E-mail...' required/>
                                 </div>
                                 <div className='formBox ja'>
-                                    <input type="text" placeholder='besedilo...' required/>
+                                    <input type="text" name="message" placeholder='besedilo...' required/>
                                 </div>
                                 <button className='poslji' type="submit" value="Send">Pošlji</button>
                             </form>

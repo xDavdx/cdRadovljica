@@ -7,10 +7,6 @@ const Zgodovina = () => {
     return (
         <div className='zgodovina-grid'>
             <ReactTitle title="ČDRadovljica | zgodovina"/>
-            <div className='zgodovina-naslov center'>
-                <img src={require('../images/naslovi.jpg')} alt="" width={'100%'} />
-                <h1 className='naslovi'>ZGODOVINA</h1>
-            </div>
             <div className='zgodovina-slika'>
                 <img className='naslovi-slika' src={require('../images/Blog-single-img12.jpg')} alt="" width={'100%'} />
             </div>
