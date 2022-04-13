@@ -24,6 +24,8 @@ import Blog1 from './pages/Blog1';
 import Blog2 from './pages/Blog2';
 import Blog3 from './pages/Blog3';
 import Blog4 from './pages/Blog4';
+import Blog5 from './pages/Blog5';
+import Blog6 from './pages/Blog6';
 import MetaTags from 'react-meta-tags';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -75,6 +77,8 @@ function App() {
         <Route path='/zanimivosti/Blog2' element={<Blog2 />} />
         <Route path='/zanimivosti/Blog3' element={<Blog3 />} />
         <Route path='/zanimivosti/Blog4' element={<Blog4 />} />
+        <Route path='/zanimivosti/Blog5' element={<Blog5 />} />
+        <Route path='/zanimivosti/Blog6' element={<Blog6 />} />
       </Routes>
       <footer>
         <div className='center footer'>

@@ -5,9 +5,15 @@ import { Link } from 'react-router-dom'
 import EmblaCarousel from './EmblaCarousel';
 import { dubaiCebela, debateObKavi, ambMasa, medRastline, hisaKranjskaCebela } from '../data/dogodki-js';
 import {ReactTitle} from 'react-meta-tags';
+import SimpleImageSlider from "react-simple-image-slider";
 
 const SLIDE_COUNT = 115;
 const slides = Array.from(Array(SLIDE_COUNT).keys());
+
+const images = [
+    { url: require("../images/galerija/DSCN0199.JPG") },
+    { url: require("../images/skupinska-slika.jpg") },
+  ];
 
 const Domov = () => {
     return (
@@ -32,10 +38,20 @@ const Domov = () => {
                         </div>
                     </div>
                 </div>
-                <div className='slika-home center'>
+                <div className='slika-home center obro'>
                     <img className='obro' src={require('../images/skupinska-slika.jpg')} alt="" width={'100%'}/>
+                    {/* <SimpleImageSlider 
+                        width={896}
+                        height={504}
+                        images={images}
+                        showBullets={true}
+                        showNavs={false}
+                        autoPlay={true}
+                    /> */}
                 </div>
-                <div className='roza2'><img src={require('../images/roza2.png')} alt="" width={'100%'}/></div>
+                <div className='roza2'>
+                    <img src={require('../images/roza2.png')} alt="" width={'100%'}/>
+                </div>
                 <div className='poskrolaj center'>
                     <p> Poskrkolaj navzdol <br />
                         <i className="fas fa-chevron-down"></i></p>

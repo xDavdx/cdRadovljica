@@ -48,12 +48,10 @@ const Zanimivosti = () => {
 
 
                 <div className='zanimivosti-3 zanimivosti123'>
-                <div className='vh3 blur-zan'>
-                        <img className='center' src={blog4.slika} alt=""/>
-                    </div>
+
                     <div className='vh65 gaba2 white zan-text-index'>
-                        <h4 className='white'>{blog2.naslov1}</h4>
-                        <p className='white'>
+                        <h4 className='black'>{blog2.naslov1}</h4>
+                        <p className='grey'>
                             {blog2.okvirno}
                         </p>
                     <Link to='Blog2'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
@@ -62,12 +60,10 @@ const Zanimivosti = () => {
                 </div>
                     
                 <div className='zanimivosti-4 zanimivosti123'>
-                <div className='vh3 blur-zan'>
-                        <img className='center' src={blog4.slika} alt=""/>
-                    </div>
+
                     <div className='vh65 gaba2 black zan-text-index'>
-                        <h4 className='white'>{blog1.naslov1}</h4>
-                        <p className='white'>
+                        <h4 className='black'>{blog1.naslov1}</h4>
+                        <p className='grey'>
                             {blog1.okvirno}
                         </p>
                         <Link to='Blog1'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
@@ -75,12 +71,10 @@ const Zanimivosti = () => {
                     </div>
                 </div>
                 <div className='zanimivosti-5 zanimivosti123'>
-                <div className='vh3 blur-zan'>
-                        <img className='center' src={blog4.slika} alt=""/>
-                    </div>
+
                     <div className='vh65 gaba2 black zan-text-index'>
-                        <h4 className='white'>{blog4.naslov1}</h4>
-                        <p className='white'>
+                        <h4 className='black'>{blog4.naslov1}</h4>
+                        <p className='grey'>
                             {blog4.okvirno}
                         </p>
                         <Link to='Blog4'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
@@ -88,12 +82,10 @@ const Zanimivosti = () => {
                     </div>
                 </div>
                 <div className='zanimivosti-6 zanimivosti123'>
-                <div className='vh3 blur-zan'>
-                        <img className='center' src={blog4.slika} alt=""/>
-                    </div>
+
                     <div className='vh65 gaba2 black zan-text-index'>
-                        <h4 className='white'>{blog5.naslov1}</h4>
-                        <p className='white'>
+                        <h4 className='black'>{blog5.naslov1}</h4>
+                        <p className='grey'>
                             {blog5.okvirno}
                         </p>
                         <Link to='Blog5'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>
@@ -103,12 +95,10 @@ const Zanimivosti = () => {
 
 
                 <div className='zanimivosti-7 zanimivosti123'>
-                    <div className='vh3 blur-zan'>
-                        <img className='center' src={blog4.slika} alt=""/>
-                    </div>
+
                     <div className='vh65 gaba2 black zan-text-index'>
-                        <h4 className='white'>{blog6.naslov1}</h4>
-                        <p className='white'>
+                        <h4 className='black'>{blog6.naslov1}</h4>
+                        <p className='grey'>
                             {blog6.okvirno}
                         </p>
                         <Link to='Blog6'><button>Beri več <i className="fas fa-chevron-right"></i></button></Link>

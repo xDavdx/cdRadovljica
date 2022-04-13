@@ -17,19 +17,17 @@ const Fotogralerija = () => {
       <ReactTitle title="ČDRadovljica | fotogalerija"/>
       <div className='gallery-grid-galerija'>
         <Item
-          original={require('../images/dobra-slika.jfif')}
-          thumbnail={require('../images/dobra-slika.jfif')}
+          original={require('../images/podelitev-nagrad.jpg')}
+          thumbnail={require('../images/podelitev-nagrad.jpg')}
           width="1600"
-          height="1600"
+          height="1066"
           title="Avtor: /"
-          id="so-first"
         >
           {({ ref, open }) => (
             <img
               style={{ cursor: 'pointer' }}
-              src={require('../images/dobra-slika.jfif')}
+              src={require('../images/podelitev-nagrad.jpg')}
               ref={ref}
-              width="100%"
               alt=''
               onClick={open}
             />
@@ -39,7 +37,7 @@ const Fotogralerija = () => {
           original={require('../images/slovenski-zajtrk.jpg')}
           thumbnail={require('../images/slovenski-zajtrk.jpg')}
           width="1600"
-          height="1068"
+          height="1066"
           title="Avtor: /"
             >
               {({ ref, open }) => (
@@ -53,8 +51,8 @@ const Fotogralerija = () => {
               )}
             </Item>
             <Item
-              original="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_b.jpg"
-              thumbnail="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_m.jpg"
+              original={require('../images/precednikCDR-z-globocnikomjpg.jpg')}
+              thumbnail={require('../images/precednikCDR-z-globocnikomjpg.jpg')}
               width="1600"
               height="1066"
               title="Avtor: /"
@@ -62,7 +60,7 @@ const Fotogralerija = () => {
               {({ ref, open }) => (
                 <img
                   style={smallItemStyles}
-                  src="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_m.jpg"
+                  src={require('../images/precednikCDR-z-globocnikomjpg.jpg')}
                   ref={ref}
                   alt=''
                   onClick={open}
@@ -70,8 +68,8 @@ const Fotogralerija = () => {
               )}
             </Item>
             <Item
-              original="https://farm6.staticflickr.com/5584/14985868676_b51baa4071_h.jpg"
-              thumbnail="https://farm6.staticflickr.com/5584/14985868676_4b802b932a_m.jpg"
+              original={require('../images/galerija/DSCN0138.JPG')}
+              thumbnail={require('../images/galerija/DSCN0138.JPG')}
               width="1600"
               height="1066"
               title="Avtor: /"
@@ -79,7 +77,7 @@ const Fotogralerija = () => {
               {({ ref, open }) => (
                 <img
                   style={{ ...smallItemStyles, gridColumnStart: 2 }}
-                  src="https://farm6.staticflickr.com/5584/14985868676_4b802b932a_m.jpg"
+                  src={require('../images/galerija/DSCN0138.JPG')}
                   ref={ref}
                   alt=''
                   onClick={open}
@@ -87,8 +85,8 @@ const Fotogralerija = () => {
               )}
             </Item>
             <Item
-              original="https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg"
-              thumbnail="https://farm4.staticflickr.com/3920/15008465772_383e697089_m.jpg"
+              original={require('../images/galerija/DSCN0153.JPG')}
+              thumbnail={require('../images/galerija/DSCN0153.JPG')}
               width="1600"
               height="1066"
               title="Avtor: /"
@@ -96,24 +94,24 @@ const Fotogralerija = () => {
               {({ ref, open }) => (
                 <img
                   style={smallItemStyles}
-                  src="https://farm4.staticflickr.com/3920/15008465772_383e697089_m.jpg"
+                  src={require('../images/galerija/DSCN0153.JPG')}
                   ref={ref}
                   alt=''
                   onClick={open}
                 />
               )}
             </Item>       <Item
-          original={require('../images/dobra-slika.jfif')}
-          thumbnail={require('../images/dobra-slika.jfif')}
+          original={require('../images/galerija/DSCN0199.JPG')}
+          thumbnail={require('../images/galerija/DSCN0199.JPG')}
           width="1600"
-          height="1600"
+          height="1068"
           title="Avtor: /"
           id="so-first"
         >
           {({ ref, open }) => (
             <img
               style={{ cursor: 'pointer' }}
-              src={require('../images/dobra-slika.jfif')}
+              src={require('../images/galerija/DSCN0199.JPG')}
               ref={ref}
               width="100%"
               alt=''
@@ -139,8 +137,8 @@ const Fotogralerija = () => {
               )}
             </Item>
             <Item
-              original="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_b.jpg"
-              thumbnail="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_m.jpg"
+              original={require('../images/piknik1.jpg')}
+              thumbnail={require('../images/piknik1.jpg')}
               width="1600"
               height="1066"
               title="Avtor: /"
@@ -148,7 +146,7 @@ const Fotogralerija = () => {
               {({ ref, open }) => (
                 <img
                   style={smallItemStyles}
-                  src="https://farm4.staticflickr.com/3902/14985871946_86abb8c56f_m.jpg"
+                  src={require('../images/piknik1.jpg')}
                   ref={ref}
                   alt=''
                   onClick={open}
@@ -156,25 +154,8 @@ const Fotogralerija = () => {
               )}
             </Item>
             <Item
-              original="https://farm6.staticflickr.com/5584/14985868676_b51baa4071_h.jpg"
-              thumbnail="https://farm6.staticflickr.com/5584/14985868676_4b802b932a_m.jpg"
-              width="1600"
-              height="1066"
-              title="Avtor: /"
-            >
-              {({ ref, open }) => (
-                <img
-                  style={{ ...smallItemStyles, gridColumnStart: 2 }}
-                  src="https://farm6.staticflickr.com/5584/14985868676_4b802b932a_m.jpg"
-                  ref={ref}
-                  alt=''
-                  onClick={open}
-                />
-              )}
-            </Item>
-            <Item
-              original="https://farm4.staticflickr.com/3920/15008465772_d50c8f0531_h.jpg"
-              thumbnail="https://farm4.staticflickr.com/3920/15008465772_383e697089_m.jpg"
+              original={require('../images/galerija/FINAL_Bees.jpg')}
+              thumbnail={require('../images/galerija/FINAL_Bees.jpg')}
               width="1600"
               height="1066"
               title="Avtor: /"
@@ -182,13 +163,14 @@ const Fotogralerija = () => {
               {({ ref, open }) => (
                 <img
                   style={smallItemStyles}
-                  src="https://farm4.staticflickr.com/3920/15008465772_383e697089_m.jpg"
+                  src={require('../images/galerija/FINAL_Bees.jpg')}
                   ref={ref}
                   alt=''
                   onClick={open}
                 />
               )}
             </Item>
+
           </div>
         </Gallery>
       )

@@ -13,6 +13,9 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
+  transition: all .2s;
+} ::-webkit-scrollbar:hover {
+  width: 10px !important;
 }
 
 /* Track */
@@ -52,6 +55,7 @@ ul {
   display: flex;
   justify-content: space-around;
   width: 35%;
+  z-index: 10000;
 }
 ul li {
   list-style-type: none;
@@ -100,14 +104,44 @@ ul .nav-link {
   ul {
     width: 44%;
   }
+
+  .ODogodkih-grid {
+    margin: 0 8em !important;
+  }
+
+  .zanimivosti-grid {
+    grid-template-columns: 15vw 35vw 35vw 15vw !important;
+    grid-template-rows: auto 15vh auto auto auto auto !important;
+    grid-template-areas: 
+                      ". zani zani ."
+                      ". zan2 zan2 ."
+                      ". zan3 zan4 ."
+                      ". zan5 zan6 ."
+                      ". zan7 . ." !important
+    
+    ;
+  }
+
+  .dog-card-bre {
+    grid-template-rows: 1% 99% !important;
+  } .dog-card-bre img {
+    height: 57200%;
+  }
+
+  .dogodki-fon-tekst {
+    height: 20px;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
   ul {
     position: absolute;
     right: 0;
-    height: 91vh;
-    top: 9vh;
+    height: 94vh;
+    top: 2em;
     background:#A6993A;
     display: flex;
     flex-direction: column;
@@ -115,6 +149,10 @@ ul .nav-link {
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+  }
+
+  ul .nav-link {
+    color: white;
   }
 
   ul li {
@@ -125,6 +163,8 @@ ul .nav-link {
     cursor: pointer;
   }
 }
+
+
 
 .nav-active {
   transform: translateX(0%);
@@ -718,6 +758,11 @@ input:focus input, input:valid input {
 
 .obro {
   border-radius: 73% 27% 50% 50% / 38% 30% 70% 62%  ;
+} .rsis-image {
+  border-radius: 73% 27% 50% 50% / 38% 30% 70% 62%  ;
+  overflow: hidden !important;
+} .rsis-container {
+  overflow: hidden !important;
 }
 
 .footer {
@@ -816,7 +861,7 @@ input:focus input, input:valid input {
   height: 30px;
   justify-content: center;
   align-items: center;
-  fill: #867c2d;
+  fill: white;
   padding: 0;
 }
 
@@ -863,7 +908,7 @@ input:focus input, input:valid input {
 .zanimivosti-grid {
   display: grid;
   grid-template-columns: 15vw 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw 11.6vw 15vh;
-  grid-template-rows: 50vh 15vh 40vh 30vh;
+  grid-template-rows: auto 15vh 40vh auto;
   grid-template-areas: 
                       ". zani zani zani zani zani zani ."
                       ". zan2 zan2 . . . . ."
@@ -878,6 +923,7 @@ input:focus input, input:valid input {
   grid-area: zan2;
 } .zanimivosti-3 {
   grid-area: zan3;
+  background-color: white !important;
 } .zanimivosti-4 {
   grid-area: zan4;
 } .zanimivosti-5 {
@@ -917,6 +963,7 @@ input:focus input, input:valid input {
   margin: 1.5em 1em;
   border-radius: 20px 20px 20px 20px / 20px 20px 20px 20px;
   overflow: hidden;
+  background-color: white;
 }
 
 .vh3 img {
@@ -1005,6 +1052,7 @@ button:hover {
 
 #simple-gallery {
   margin: 10vh 15vw;
+  overflow: hidden;
 } 
 
 .pswp__button:hover {
@@ -1102,6 +1150,10 @@ figcaption {
     font-size: 22px;
   }
 
+  .clani-card {
+    height: auto;
+  }
+
   #basic {
     grid-template-columns: 12vw 48vw 28vw 12vw;
   }
@@ -1144,6 +1196,10 @@ figcaption {
     margin: 0;
   }
 
+  .embla__slide {
+    min-width: 50%;
+  }
+
   .domov-pomembn-dogodk {
     grid-template-rows: 34vh 34vh;
   }
@@ -1174,6 +1230,9 @@ figcaption {
     width: 100%;
   } .slika-home img {
     width: 60% !important;
+  }
+  .font16 {
+    text-align: justify;
   }
 
   .absolute {
@@ -1222,6 +1281,7 @@ figcaption {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 1em;
   }
 
   .d1, .d2, .d3, .d4 {
@@ -1296,6 +1356,63 @@ figcaption {
     width: 100%;
   }
 
+  .bg-kontkat {
+    margin-top: 7em;
+  }
+
+  .gallery-grid-galerija {
+    margin: 0 5vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(10, auto);
+  }
+
+  .ODogodkih-grid {
+    margin: 2em !important;
+  } .ODogodkih-grid .flex {
+    display: block !important;
+  } .ODogodkih-grid img {
+    width: 100%;
+    height: 15em;
+  } .odogodkih-text {
+    padding: 0;
+  }
+  
+  .zgodovina-slike {
+    display: none;
+  }
+
+  .zgodovina-grid {
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: auto auto auto auto ;
+    grid-template-areas: 
+                        ". nz ."
+                        ". zs ."
+                        ". zt1 ."
+                        ". zt2 ."
+    ;
+  }
+
+  .zgodovina-random {
+    display: none;
+  }
+
+  .zanimivosti-grid {
+    grid-template-columns: 8vw 85vw 8vw !important;
+    grid-template-rows: auto auto auto auto auto auto auto !important;
+    grid-template-areas: 
+                        ". zani ."
+                        ". zan2 ."
+                        ". zan3 ."
+                        ". zan4 ."
+                        ". zan5 ."
+                        ". zan6 ."
+                        ". zan7 ." !important
+    ; 
+  }
+
+  .zanimivosti-zgodovina-card {
+    max-height: none !important;
+  }
   
   .home-grid {
     grid-template-columns: 5vw 1fr 5vw;
@@ -1336,6 +1453,10 @@ figcaption {
   } .dog-phone-domov {
     padding-right: 1em !important;
     font-size: 14px;
+  }
+
+  .slika-zravn-2 {
+    display: none;
   }
 
   .d1, .d2, .d3, .d4 {
@@ -1414,6 +1535,7 @@ figcaption {
     height: 48px;
     overflow:hidden;
     text-overflow:ellipsis;
+    display: none;
   } .dogodki-fon-naslov {
     font-size: 16px;
   } .dog-card-bre img {
